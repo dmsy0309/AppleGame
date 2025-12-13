@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cyms0ieng1jqm"]
+
+[node name="StartPage" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 437.0
+offset_top = 81.0
+offset_right = 739.0
+offset_bottom = 194.0
+text = "Apple"
+horizontal_alignment = 1
+vertical_alignment = 1
