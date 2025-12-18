@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dq3baa81b3v06"]
+
+[ext_resource type="Script" uid="uid://5dxh4nsq1mrg" path="res://Scripts/AppleTile.gd" id="1_he28p"]
+[ext_resource type="Texture2D" uid="uid://b82l2v331ildu" path="res://Assets/Apple.png" id="2_f3ixl"]
+[ext_resource type="Texture2D" uid="uid://ex0ynk564bds" path="res://Assets/GoldenApple.png" id="3_l08hd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3ixl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="AppleTile" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f3ixl")
+script = ExtResource("1_he28p")
+normal_tex = ExtResource("2_f3ixl")
+golden_tex = ExtResource("3_l08hd")
+
+[node name="AppleImage" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -38.0
+offset_top = -31.0
+offset_right = 691.9999
+offset_bottom = 683.99994
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_f3ixl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Number" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 24.0
+offset_right = 51.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 32
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,265 @@
+[gd_scene load_steps=8 format=3 uid="uid://chvubp5avkapq"]
+
+[ext_resource type="Script" uid="uid://8vy75qhbm6yr" path="res://Scripts/StartMenu.gd" id="1_dvnd1"]
+[ext_resource type="Texture2D" uid="uid://bfu3g6y0kuomf" path="res://Assets/inf1.png" id="2_h303d"]
+[ext_resource type="Texture2D" uid="uid://8hvjqfqkoqyy" path="res://Assets/inf2.png" id="3_ujd4t"]
+[ext_resource type="Texture2D" uid="uid://fh0cmi1hiwrx" path="res://Assets/inf3.png" id="4_ql1sk"]
+[ext_resource type="Script" uid="uid://ocdmx8ury61m" path="res://Scripts/Settings.gd" id="5_ujd4t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dvnd1"]
+bg_color = Color(0.89411765, 0.8784314, 0.7372549, 0.7490196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtte2"]
+bg_color = Color(0.60038817, 0.60038817, 0.60038817, 0.75000006)
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dvnd1")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dvnd1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -301.0
+offset_top = -385.0
+offset_right = 298.0
+offset_bottom = -219.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "[color=red]사[/color][color=green]과[/color][color=white]게임[/color]"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -642.0
+offset_bottom = -161.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 32
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "시작"
+
+[node name="InformationButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "게임 설명
+"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "설정"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "나가기
+"
+
+[node name="Information" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.044270832
+anchor_top = 0.11388889
+anchor_right = 0.94947916
+anchor_bottom = 0.88703704
+theme_override_styles/panel = SubResource("StyleBoxFlat_xtte2")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Information"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -388.5
+offset_right = 428.0
+offset_bottom = -36.5
+grow_vertical = 2
+texture = ExtResource("2_h303d")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Information"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -676.0
+offset_top = -411.5
+offset_right = -42.0
+offset_bottom = 43.5
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("3_ujd4t")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Information"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = 72.5
+offset_right = 507.0
+offset_bottom = 458.5
+grow_vertical = 2
+texture = ExtResource("4_ql1sk")
+stretch_mode = 5
+
+[node name="InformationCloseButton" type="Button" parent="Information"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -281.0
+offset_top = -148.0
+offset_right = -25.0
+offset_bottom = -21.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "닫기"
+
+[node name="Label" type="Label" parent="Information"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -18.5
+offset_right = 812.0
+offset_bottom = 131.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "마우스를 드래그했을 때 드래그한 영역
+안에 있는 사과 숫자의 합이 10이 되면 사과가 없어지고,
+없어진 사과의 개수만큼 점수를 얻습니다."
+
+[node name="Label2" type="Label" parent="Information"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -685.0
+offset_top = 33.5
+offset_right = -26.0
+offset_bottom = 174.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "만약 드래그한 영역 안에 노란색 사과가 있으면
+노란색 사과 한개당 3점의 점수를 얻습니다.
+(노란색 사과는 15%의 확률로 생성됨)"
+
+[node name="Label3" type="Label" parent="Information"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 516.0
+offset_top = 245.5
+offset_right = 1282.0
+offset_bottom = 398.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "제한시간 2분 안에 최대한 높은 점수를 기록해보세요!!!"
+
+[node name="Settings" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004717342
+anchor_top = 0.024909973
+anchor_right = 0.90992564
+anchor_bottom = 0.7980581
+offset_left = 76.9427
+offset_top = 95.09723
+offset_right = 76.94275
+offset_bottom = 95.09717
+theme_override_styles/panel = SubResource("StyleBoxFlat_xtte2")
+script = ExtResource("5_ujd4t")
+metadata/_edit_use_anchors_ = true
+
+[node name="SettingsCloseButton" type="Button" parent="Settings"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -281.0
+offset_top = -148.0
+offset_right = -25.0
+offset_bottom = -21.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "닫기"
+
+[node name="Label" type="Label" parent="Settings"]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 225.0
+offset_right = 575.0
+offset_bottom = 314.0
+theme_override_font_sizes/font_size = 64
+text = "배경음"
+
+[node name="Label2" type="Label" parent="Settings"]
+layout_mode = 0
+offset_left = 1157.0
+offset_top = 224.0
+offset_right = 1349.0
+offset_bottom = 313.0
+theme_override_font_sizes/font_size = 64
+text = "효과음"
+
+[node name="MusicCheck" type="CheckBox" parent="Settings"]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 295.0
+offset_right = 448.0
+offset_bottom = 326.0
+scale = Vector2(5, 5)
+
+[node name="SfxCheck" type="CheckBox" parent="Settings"]
+layout_mode = 0
+offset_left = 1196.0
+offset_top = 311.0
+offset_right = 1220.0
+offset_bottom = 335.0
+scale = Vector2(5, 5)
