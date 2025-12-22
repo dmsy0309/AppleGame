@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://chvubp5avkapq"]
+[gd_scene load_steps=9 format=3 uid="uid://chvubp5avkapq"]
 
 [ext_resource type="Script" uid="uid://8vy75qhbm6yr" path="res://Scripts/StartMenu.gd" id="1_dvnd1"]
+[ext_resource type="Theme" uid="uid://6jm1tq8oeeay" path="res://Theme/main_theme.tres" id="1_ql1sk"]
 [ext_resource type="Texture2D" uid="uid://bfu3g6y0kuomf" path="res://Assets/inf1.png" id="2_h303d"]
 [ext_resource type="Texture2D" uid="uid://8hvjqfqkoqyy" path="res://Assets/inf2.png" id="3_ujd4t"]
 [ext_resource type="Texture2D" uid="uid://fh0cmi1hiwrx" path="res://Assets/inf3.png" id="4_ql1sk"]
@@ -19,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ql1sk")
 script = ExtResource("1_dvnd1")
 
 [node name="BackGround" type="Panel" parent="."]

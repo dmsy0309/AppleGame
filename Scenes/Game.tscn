@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://xvjv4bumkuk1"]
+[gd_scene load_steps=15 format=3 uid="uid://xvjv4bumkuk1"]
 
+[ext_resource type="Theme" uid="uid://6jm1tq8oeeay" path="res://Theme/main_theme.tres" id="1_fgofq"]
 [ext_resource type="Script" uid="uid://dddya8o0kmw8t" path="res://Scripts/Game.gd" id="1_iukft"]
 [ext_resource type="PackedScene" uid="uid://dq3baa81b3v06" path="res://Scenes/AppleTile.tscn" id="2_gl6un"]
 [ext_resource type="AudioStream" uid="uid://c57ipx00p2u0h" path="res://Assets/BGM.mp3" id="3_j5yw3"]
@@ -50,6 +51,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_fgofq")
 script = ExtResource("1_iukft")
 tile_scene = ExtResource("2_gl6un")
 
